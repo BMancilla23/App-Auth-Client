@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const SignUp = () => {
   const [formData, setformData] = useState({})
   const [error, seterror] = useState(false);
   const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     /* console.log(e.target.id); */
@@ -32,6 +33,7 @@ export const SignUp = () => {
         seterror(true);
         return
       }
+      navigate('/sign-in')
      
     } catch (error) {
       setLoading(false)
@@ -52,7 +54,7 @@ export const SignUp = () => {
       <div className='flex gap-2 mt-5'>
         <p>Have an account</p>
         <Link to='/sign-in'>
-          <span className='text-blue-500'>Sign In</span>
+          <span className='text-rose-500 font-semibold'>Sign In</span>
         </Link>
       </div>
       <p className='text-red-700 mt-5'>{error && 'Something want wrong!'}</p>
