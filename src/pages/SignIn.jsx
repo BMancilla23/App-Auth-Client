@@ -1,3 +1,4 @@
+import { OAuth } from '@/components'
 import { signInFailure, signInStart, signInSuccess } from '@/redux/user/userSlice'
 import React from 'react'
 import { useState } from 'react'
@@ -59,6 +60,7 @@ export const SignIn = () => {
         <input type="email" name="email" id="email" placeholder='Email' className='outline-none bg-slate-100 p-3 rounded-lg' onChange={handleChange} />
         <input type="password" name="password" id="password" placeholder='*******' className='outline-none bg-slate-100 p-3 rounded-lg' onChange={handleChange} />
         <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'Loading...' : 'Sign In'}</button>
+        <OAuth/>
       </form>
       <div className='flex gap-2 mt-5'>
         <p>Dont have an account</p>
