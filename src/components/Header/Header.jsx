@@ -52,7 +52,7 @@ const Header = ({ }) => {
 						)}
 					</ul>
 				</div>
-				<button onClick={toggleMenu} className="md:hidden m-0 text-gray-300 flex hover:text-white focus:outline-none">
+				<button onClick={toggleMenu} className="md:hidden m-0 text-gray-300 hover:text-white focus:outline-none">
 					{open ? (
 						<svg viewBox="0 0 24 24" className="h-10 w-10 fill-current">
 							<path fillRule="evenodd" d="M19.354 4.646a.5.5 0 010 .708l-3.182 3.182 3.182 3.182a.5.5 0 01-.708.708L15.464 9.95l-3.182 3.182a.5.5 0 01-.708-.708l3.182-3.182-3.182-3.182a.5.5 0 01.708-.708L15.464 8.534l3.182-3.182a.5.5 0 01.708 0z"></path>
